@@ -1,0 +1,38 @@
+
+.container{
+    margin-top: 1em;
+}
+.arrow{
+    size: 3rem;
+    margin: 0.2em;
+}
+
+.up{
+    color: rgba(221,225,154,255);
+
+}
+.up:hover{
+    color: rgb(156, 156, 156);
+}
+
+.down{
+    color: rgba(206,109,124,255);
+}
+.down:hover{
+    color: rgb(156, 156, 156);
+}
+.left{
+    color: rgba(121,213,113,255)
+}
+.left:hover{
+    color: rgb(156, 156, 156);
+}
+.right{
+    color: rgba(121,219,229,255);
+}
+.right:hover{
+    color: rgb(156, 156, 156);
+}
+.controller{
+    color: white;
+}
