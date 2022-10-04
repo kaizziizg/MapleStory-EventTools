@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MapleStory-EventTools/static/css/main.9ff18b50.css",
+    "main.js": "/MapleStory-EventTools/static/js/main.88d1c8b1.js",
+    "index.html": "/MapleStory-EventTools/index.html",
+    "main.9ff18b50.css.map": "/MapleStory-EventTools/static/css/main.9ff18b50.css.map",
+    "main.88d1c8b1.js.map": "/MapleStory-EventTools/static/js/main.88d1c8b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ff18b50.css",
+    "static/js/main.88d1c8b1.js"
+  ]
+}
