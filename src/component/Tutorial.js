@@ -8,8 +8,12 @@ export default function Tutorial(){
 			<Table striped bordered hover variant="dark" className='table'>
 			<thead>
 				<tr>
-					<th>按鍵</th>
-					<th>用途</th>
+					<td colSpan={2} style={{textAlign:"center",fontWeight:"bold"}}>綻放舞會小工具</td>
+
+				</tr>
+				<tr>
+					<th style={{textAlign:"center",fontWeight:"bold"}}>按鍵</th>
+					<th style={{textAlign:"center",fontWeight:"bold"}}>用途</th>
 				</tr>
 			</thead>
 			<tbody>

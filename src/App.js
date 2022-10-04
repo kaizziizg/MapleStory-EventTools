@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { ArrowLeftCircleFill,ArrowUpCircleFill,ArrowRightCircleFill,ArrowDownCircleFill,Controller } from 'react-bootstrap-icons';
+import { ArrowLeftCircleFill,ArrowUpCircleFill,ArrowRightCircleFill,ArrowDownCircleFill,Controller, Pass } from 'react-bootstrap-icons';
 import "./App.css"
 
 let index = 0 
 function App() {
-	let [msg,setMsg] = useState([<Controller size="1.5em" className="controller" />])
+	let [msg,setMsg] = useState([])
 	
-	useEffect(()=>{
-		
-		document.addEventListener('keydown',detectKeydown)
-	},[])
-	useEffect(()=>{
-		console.log(msg)
-	},[msg])
+	
 
 	const detectKeydown = (e)=> {
 		// console.log(e.keyCode)
@@ -20,16 +14,16 @@ function App() {
 		let x = index
 		switch(e.keyCode){
 			case 37:
-				setMsg( msg=>[ ...msg, <ArrowLeftCircleFill size="1.5em" className="arrow left" key={x} onClick={()=>deleteArrow(x)}/>]);
-				break;
+				setMsg( msg=>[ ...msg, <ArrowLeftCircleFill size="3em" className="arrow left" key={x} onClick={()=>deleteArrow(x)}/>]);
+				break
 			case 38:
-				setMsg(msg=>[ ...msg,<ArrowUpCircleFill size="1.5em" className="arrow up" key={x} onClick={() =>deleteArrow(x)}/>])
+				setMsg(msg=>[ ...msg,<ArrowUpCircleFill size="3em" className="arrow up" key={x} onClick={() =>deleteArrow(x)}/>])
 				break;
 			case 39:
-				setMsg(msg=>[...msg,<ArrowRightCircleFill size="1.5em" className="arrow right" key={x} onClick={() =>deleteArrow(x)}/>])
+				setMsg(msg=>[...msg,<ArrowRightCircleFill size="3em" className="arrow right" key={x} onClick={() =>deleteArrow(x)}/>])
 				break;
 			case 40:
-				setMsg(msg=>[...msg,<ArrowDownCircleFill size="1.5em" className="arrow down" key={x} onClick={() =>deleteArrow(x)}/>])
+				setMsg(msg=>[...msg,<ArrowDownCircleFill size="3em" className="arrow down" key={x} onClick={() =>deleteArrow(x)}/>])
 				break;
 			case 13: // Enter
 				setMsg([])
@@ -43,16 +37,30 @@ function App() {
 			
 		}
 		index++
-
 	}
+
 	const deleteArrow = (idx)=>{
-		console.log(idx)
+		//console.log(idx)
 		setMsg(msg=>msg.filter((item)=>item.key!=idx))
 	}
-	
+
+	useEffect(()=>{
+		document.addEventListener('keydown',detectKeydown)
+	},[])
+
+	useEffect(()=>{
+		
+	},[msg])
+
+
+
 	return <div className="container" height="30%">
+		<Controller size="3em" className="controller" />
 		{msg}
 	</div>
 }
 
 export { App };
+
+
+
